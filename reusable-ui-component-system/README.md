@@ -38,8 +38,8 @@ src/
  │    ├── Modal.jsx
  │    ├── Loader.jsx
  │    ├── Toast.jsx
- │    ├── index.js
- │    └── README.md
+ │    
+ │   
  ├── pages/
  │    └── UIDemo.jsx
  ├── App.jsx
