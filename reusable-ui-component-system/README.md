@@ -1,16 +1,175 @@
-# React + Vite
+🧩 Reusable UI Component System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A lightweight, scalable, and reusable UI component library built using React + Tailwind CSS.
+Designed with atomic design principles and props-driven architecture.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## React Compiler
+This project demonstrates how to build a reusable UI system using:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Atomic Design Principles
 
-## Expanding the ESLint configuration
+Props-driven Components
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Clean Folder Architecture
+
+Consistent Design System
+
+Utility-first styling (Tailwind CSS)
+
+The goal was to create scalable components that can be reused across multiple pages or projects.
+
+🏗 Tech Stack
+
+⚛ React
+
+🎨 Tailwind CSS
+
+⚡ Vite
+
+🧠 Functional Components + Hooks
+
+📁 Project Structure
+src/
+ ├── ui/
+ │    ├── Button.jsx
+ │    ├── Input.jsx
+ │    ├── Select.jsx
+ │    ├── Modal.jsx
+ │    ├── Loader.jsx
+ │    ├── Toast.jsx
+ │    ├── index.js
+ │    └── README.md
+ ├── pages/
+ │    └── UIDemo.jsx
+ ├── App.jsx
+ └── main.jsx
+🧩 Components
+🔘 Button
+
+Reusable button with variant, size, and loading support.
+
+Props
+Prop	Type	Default	Description
+variant	primary | secondary | danger	primary	Button style
+size	sm | md | lg	md	Button size
+loading	boolean	false	Shows loading state
+onClick	function	—	Click handler
+Usage
+<Button>Primary</Button>
+<Button variant="danger">Delete</Button>
+<Button size="lg">Large Button</Button>
+📝 Input
+
+Input field with label and error support.
+
+Props
+Prop	Type	Description
+label	string	Field label
+error	string	Error message
+type	string	Input type
+value	string	Controlled value
+onChange	function	Change handler
+Usage
+<Input label="Email" type="email" />
+🔽 Select
+
+Reusable dropdown component.
+
+Props
+Prop	Type	Description
+label	string	Field label
+options	array	Dropdown options
+value	string	Selected value
+onChange	function	Change handler
+Usage
+<Select
+  label="Category"
+  options={[
+    { label: "Frontend", value: "frontend" },
+    { label: "Backend", value: "backend" }
+  ]}
+/>
+🪟 Modal
+
+Reusable modal dialog.
+
+Props
+Prop	Type	Description
+isOpen	boolean	Controls visibility
+onClose	function	Close handler
+title	string	Modal title
+children	ReactNode	Modal content
+⏳ Loader
+
+Simple animated spinner.
+
+<Loader />
+🔔 Toast
+
+Temporary notification component.
+
+Props
+Prop	Type	Description
+message	string	Notification message
+type	success | error	Toast style
+onClose	function	Close handler
+📦 Barrel Export (Clean Imports)
+export { default as Button } from "./Button";
+export { default as Input } from "./Input";
+export { default as Select } from "./Select";
+export { default as Modal } from "./Modal";
+export { default as Loader } from "./Loader";
+export { default as Toast } from "./Toast";
+
+Usage:
+
+import { Button, Input, Modal } from "../ui";
+🎯 Design Principles
+
+Consistent spacing and typography
+
+Reusable and scalable components
+
+Clear prop-based API
+
+Separation of concerns
+
+Clean folder architecture
+
+🛠 Installation
+git clone https://github.com/zayaaan-al/Zecser-Day15.git
+cd repo-name
+npm install
+npm run dev
+📈 Future Improvements
+
+Add dark mode support
+
+Add animations
+
+Convert to TypeScript
+
+Add global Toast Provider
+
+Publish as NPM package
+
+Add Storybook documentation
+
+🧑‍💻 Author
+
+Al Zayan P.
+MERN Stack Developer
+
+Portfolio:
+https://alzayan-portfolio.vercel.app/
+
+⭐ Show Your Support
+
+If you like this project:
+
+⭐ Star this repository
+
+🍴 Fork it
+
+📢 Share it
